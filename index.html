@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LUMA - Joyería artesanal con historia.">
+  <title>LUMA | Joyería artesanal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script defer src="js/data/products.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+
+<body>
+
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="icon-button menu-button" id="open-menu" aria-label="Abrir menú">☰</button><a class="brand"
+        href="index.html">LU<span>•</span>MA</a>
+      <nav class="nav" aria-label="Principal"><a class="active" href="colecciones.html">Colecciones</a><a
+          href="aretes.html">Aretes</a><a href="collares.html">Collares</a><a href="pulseras.html">Pulseras</a><a
+          href="tobilleras.html">Tobilleras</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></nav>
+
+      <div class="header-actions"><button class="theme-toggle" type="button" aria-label="Modo oscuro"><span
+      class="theme-toggle-thumb"></span></button>
+      
+    </div>
+  </header>
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="drawer" class="drawer" aria-label="Menú principal">
+    <div class="drawer-head"><a class="brand" href="index.html">LU<span>•</span>MA</a><button id="close-menu"
+        class="icon-button" aria-label="Cerrar menú">×</button></div>
+    <nav><a class="active" href="colecciones.html">Colecciones</a><a href="aretes.html">Aretes</a><a
+        href="collares.html">Collares</a><a href="pulseras.html">Pulseras</a><a href="tobilleras.html">Tobilleras</a><a href="nosotros.html">Nosotros</a><a
+        href="contacto.html">Contacto</a>
+    </nav>
+     <div class="drawer-foot">
+    <span>Modo oscuro</span>
+    <button class="theme-toggle" type="button" aria-label="Modo oscuro"><span class="theme-toggle-thumb"></span></button>
+  </div>
+  </aside>
+
+
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content"><span class="eyebrow">Joyería con historia</span>
+        <h1>Elegancia Natural<br>en Cada Detalle</h1>
+        <p>Joyas artesanales que cuentan tu historia con la pureza de la tierra.</p><a class="button"
+          href="#collections">Conoce la historia de LUMA</a>
+      </div>
+    </section>
+    <section class="section container home-categories" id="collections">
+      <div class="section-heading"><span class="eyebrow">Categorías</span>
+        <h2>Encuentra la pieza que habla de ti</h2>
+      </div>
+      <div class="category-teasers"><a class="category-teaser" href="collares.html"><img
+            src="assets/img/category-collares.png" alt="Collares"><span>Collares</span></a><a class="category-teaser"
+          href="tobilleras.html"><img src="assets/img/category-tobilleras.png"
+            alt="Tobilleras"><span>Tobilleras</span></a><a class="category-teaser" href="aretes.html"><img
+            src="assets/img/category-aretes.png" alt="Aretes"><span>Aretes</span></a><a class="category-teaser"
+          href="pulseras.html"><img src="assets/img/category-pulseras.png" alt="Pulseras"><span>Pulseras</span></a>
+      </div>
+    </section>
+    <section class="heritage"><img src="assets/img/heritage.png" alt="Proceso artesanal de joyería">
+      <div class="heritage-copy"><span class="eyebrow">Nuestra esencia</span>
+        <h2>Artesanía y herencia en cada pieza</h2>
+        <p>En LUMA creemos que cada joya puede contar una historia. Trabajamos con detalles, texturas y piedras que
+          hacen especial cada creación.</p><a class="button" href="nosotros.html">Conoce la historia de LUMA</a>
+      </div>
+    </section>
+
+
+    <section class="section container">
+      <div class="section-heading">
+        <span class="eyebrow">Piezas destacadas</span>
+        <h2>Hechas para acompañar tus momentos</h2>
+      </div>
+
+      <div class="carousel">
+
+        <button class="carousel-btn prev">&#10094;</button>
+
+        <div class="carousel-container">
+
+          <div class="carousel-track">
+
+            <article class="product-card">
+              <a href="producto.html?producto=pulsera-rio-de-luz">
+                <img src="assets/img/pulsera-rio-de-luz.png" alt="Pulsera doble Río de Luz">
+              </a>
+              <div class="product-card-info">
+                <h3>Pulsera doble Río de Luz</h3>
+                <p>S/. 55.00</p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <a href="producto.html?producto=tobillera-amor-eterno">
+                <img src="assets/img/tobillera-amor-eterno.png" alt="Tobillera Amor Eterno">
+              </a>
+              <div class="product-card-info">
+                <h3>Tobillera Amor Eterno</h3>
+                <p>S/. 65.00</p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <a href="producto.html?producto=aretes-brisa-serena">
+                <img src="assets/img/aretes-brisa-serena.png" alt="Aretes Brisa Serena">
+              </a>
+              <div class="product-card-info">
+                <h3>Aretes Brisa Serena</h3>
+                <p>S/. 30.00</p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <a href="producto.html?producto=tobillera-amor-eterno">
+                <img src="assets/img/tobillera-amor-eterno.png" alt="Tobillera Amor Eterno">
+              </a>
+              <div class="product-card-info">
+                <h3>Tobillera Amor Eterno</h3>
+                <p>S/. 65.00</p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <a href="producto.html?producto=aretes-brisa-serena">
+                <img src="assets/img/aretes-brisa-serena.png" alt="Aretes Brisa Serena">
+              </a>
+              <div class="product-card-info">
+                <h3>Aretes Brisa Serena</h3>
+                <p>S/. 30.00</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><a class="brand" href="index.html">LU<span>•</span>MA</a>
+          <p>Joyería artesanal que celebra la belleza de las piedras, los detalles y las historias que nos acompañan.
+          </p>
+        </div>
+        <div>
+          <h3>Explorar</h3><a href="aretes.html">Aretes</a><a href="collares.html">Collares</a><a
+            href="pulseras.html">Pulseras</a><a href="tobilleras.html">Tobilleras</a>
+        </div>
+        <div>
+          <h3>Servicio</h3><a href="contacto.html">Contacto</a><a href="contacto.html">Envíos</a><a
+            href="contacto.html">Cuidado de joyas</a>
+        </div>
+        <div>
+          <h3>Newsletter</h3>
+          <p>Recibe novedades y piezas especiales.</p>
+          <form class="newsletter" data-newsletter><input required type="email" aria-label="Correo electrónico"
+              placeholder="Tu correo electrónico"><button aria-label="Suscribirme">→</button></form>
+          <div class="newsletter-message" data-newsletter-message></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 LUMA Joyería</span><a href="https://wa.me/51999999999" target="_blank"
+          rel="noopener">WhatsApp</a></div>
+    </div>
+  </footer>
+</body>
+
+</html>

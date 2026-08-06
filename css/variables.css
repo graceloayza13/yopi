@@ -1,0 +1,6 @@
+:root {
+  --bg: #f8f7f3; --bg-alt: #efece7; --ink: #1a1a18; --muted: #4a4a42;
+  --gold: #7a6a1f; --olive: #4d4634; --line: #dad5cc; --white: #fff;
+  --serif: "Playfair Display", Georgia, serif; --sans: Poppins, Arial, sans-serif; --script: "Alex Brush", cursive;
+  --page: min(1180px, calc(100% - 48px)); --shadow: 0 12px 35px rgb(26 26 24 / 12%);
+}

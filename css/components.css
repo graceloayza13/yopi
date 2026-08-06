@@ -1,0 +1,384 @@
+.site-header {
+    position: relative;
+    z-index: 10;
+    height: 82px;
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+}
+
+.header-inner {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: clamp(22px, 4vw, 72px);
+    height: 100%;
+}
+
+.brand {
+    display: block;
+    width: 80px;
+    height: 60px;
+    overflow: hidden;
+    background: url("../assets/img/logo luma-Photoroom.png") center / contain no-repeat;
+    font-size: 0;
+    text-indent: -9999px;
+}
+
+.brand span {
+    display: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: clamp(15px, 2.3vw, 32px);
+}
+
+.nav a {
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.nav a.active,
+.nav a:hover {
+    color: var(--gold);
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-underline-offset: 6px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    width: 42px;
+    height: 22px;
+    padding: 3px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--ink);
+    transition: .2s;
+}
+
+.theme-toggle:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.theme-toggle-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: currentColor;
+    transition: .2s;
+}
+
+.icon-button {
+    border: 0;
+    padding: 6px;
+    background: transparent;
+    color: var(--ink);
+    font-size: 18px;
+    line-height: 1;
+}
+
+.icon-button:hover {
+    color: var(--gold);
+}
+
+.menu-button {
+    display: none;
+    justify-self: start;
+}
+
+.mobile-bag {
+    display: none;
+    justify-self: end;
+}
+
+.drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    background: rgb(0 0 0 / .38);
+    opacity: 0;
+    visibility: hidden;
+    transition: .25s;
+}
+
+.drawer-backdrop.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.drawer {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 21;
+    width: min(320px, 86vw);
+    padding: 27px;
+    background: var(--bg);
+    box-shadow: var(--shadow);
+    transform: translateX(-105%);
+    transition: .3s ease;
+}
+
+.drawer.open {
+    transform: translateX(0);
+}
+
+.drawer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 42px;
+}
+
+.drawer nav {
+    display: grid;
+}
+
+.drawer nav a {
+    border-bottom: 1px solid var(--line);
+    padding: 17px 0;
+    font: 500 20px var(--serif);
+}
+
+.drawer nav a.active {
+    color: var(--gold);
+}
+
+.footer {
+    background: var(--bg-alt);
+    padding: 65px 0 27px;
+}
+
+.footer .brand {
+    width: 74px;
+    height: 56px;
+    margin-bottom: 10px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.35fr repeat(3, 1fr);
+    gap: 35px;
+}
+
+.footer p {
+    max-width: 260px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.footer h3 {
+    margin: 0 0 14px;
+    font: 500 18px var(--serif);
+}
+
+.footer a {
+    display: block;
+    margin: 7px 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.newsletter {
+    display: flex;
+    border-bottom: 1px solid var(--ink);
+}
+
+.newsletter input {
+    min-width: 0;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    outline: 0;
+    padding: 8px 0;
+}
+
+.newsletter button {
+    border: 0;
+    background: none;
+    font-size: 20px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.newsletter-message {
+    min-height: 20px;
+    margin-top: 8px;
+    font-size: 11px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-alt);
+}
+
+.product-card img {
+    aspect-ratio: .82;
+    object-fit: cover;
+    transition: transform .4s;
+}
+
+.product-card:hover img {
+    transform: scale(1.04);
+}
+
+.product-card-info {
+    padding: 14px 0 3px;
+}
+
+.product-card h3 {
+    margin: 0;
+    font: 500 20px var(--serif);
+}
+
+.product-card p {
+    margin: 3px 0;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.product-card .view-product {
+    position: absolute;
+    inset: auto 16px 16px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: .25s;
+}
+
+.product-card:hover .view-product {
+    opacity: 1;
+    transform: none;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 28px 0 35px;
+}
+
+
+.filter-dropdown { position: relative; }
+.filter-dropdown-toggle { display: inline-flex; align-items: center; gap: 6px; }
+.filter-dropdown-toggle::after { content: "▾"; font-size: 9px; transition: transform .2s; }
+.filter-dropdown.open .filter-dropdown-toggle::after { transform: rotate(180deg); }
+.filter-dropdown-toggle.has-selection { border-color: var(--gold); color: var(--gold); background: transparent; }
+.filter-dropdown-menu { position: absolute; top: calc(100% + 10px); left: 0; z-index: 5; display: grid; gap: 2px; min-width: 220px; padding: 10px; background: rgb(248 247 243 / 70%); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid var(--line); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-6px); transition: .2s; }.filter-dropdown.open .filter-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.filter-dropdown-menu button { border: 0; border-left: 2px solid transparent; padding: 13px 16px; background: transparent; text-align: left; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); transition: .2s; }
+.filter-dropdown-menu button:hover { background: var(--bg-alt); color: var(--gold); }
+.filter-dropdown .filter-dropdown-menu button.active { border-left-color: var(--gold); background: var(--bg-alt); color: var(--gold); }
+
+
+
+
+.tabs button {
+    border: 1px solid var(--line);
+    padding: 9px 17px;
+    background: transparent;
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.tabs button.active {
+    border-color: var(--ink);
+    background: var(--ink);
+    color: var(--white);
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        height: 66px;
+    }
+
+    .header-inner {
+        grid-template-columns: 1fr 70px 1fr;
+        column-gap: 0;
+    }
+
+    .menu-button,
+    .mobile-bag {
+        display: block;
+    }
+
+    .nav,
+    .header-actions {
+        display: none;
+    }
+
+    .brand {
+        width: 66px;
+        height: 50px;
+        justify-self: center;
+    }
+
+    .footer {
+        padding-top: 46px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid> :not(:first-child) {
+        display: none;
+    }
+
+    .footer-bottom {
+        margin-top: 25px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .product-card h3 {
+        font-size: 17px;
+    }
+
+    .product-card .view-product {
+        opacity: 1;
+        transform: none;
+        inset: auto 9px 9px;
+        padding: 0 10px;
+        min-height: 35px;
+    }
+
+    .tabs {
+        overflow-x: auto;
+    }
+}
+
+/* La sección "Nosotros" (hero, historia, fundadora, galería y cita)
+   se estilizó en css/pages.css, junto a las demás páginas internas
+   del sitio (contacto, colecciones, producto), para reutilizar las
+   mismas variables de color/tipografía y evitar reglas duplicadas
+   o en conflicto con el resto del sitio. */

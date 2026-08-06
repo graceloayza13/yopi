@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | LUMA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <script defer src="js/data/products.js"></script>
+    <script defer src="js/app.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner"><button class="icon-button menu-button" id="open-menu"
+                aria-label="Abrir menú">☰</button><a class="brand" href="index.html">LU<span>•</span>MA</a>
+            <nav class="nav"><a href="colecciones.html">Colecciones</a><a href="aretes.html">Aretes</a><a
+                    href="collares.html">Collares</a><a href="pulseras.html">Pulseras</a><a
+                    href="tobilleras.html">Tobilleras</a><a class="active" href="nosotros.html">Nosotros</a><a
+                    href="contacto.html">Contacto</a></nav>
+            <div class="header-actions"><button class="icon-button" aria-label="Buscar">⌕</button><button
+                    class="icon-button" aria-label="Favoritos">♡</button></div><button class="icon-button mobile-bag"
+                aria-label="Bolsa">♧</button>
+                
+        </div>
+    </header>
+    <div id="drawer-backdrop" class="drawer-backdrop"></div>
+    <aside id="drawer" class="drawer">
+        <div class="drawer-head"><a class="brand" href="index.html">LU<span>•</span>MA</a><button id="close-menu"
+                class="icon-button" aria-label="Cerrar menú">×</button></div>
+        <nav><a href="colecciones.html">Colecciones</a><a href="aretes.html">Aretes</a><a
+                href="collares.html">Collares</a><a href="pulseras.html">Pulseras</a><a
+                href="tobilleras.html">Tobilleras</a><a
+                href="contacto.html">Contacto</a></nav>
+    </aside>
+    <main>
+
+        <!-- ===================================================
+             BLOQUE 1 · HERO
+             IMAGEN: fondo (assets/img/home-hero.png, definida en
+                      pages.css con --hero-image; reemplazar por foto
+                      real del taller/marca)
+             TEXTO:  eyebrow "LUMA" + título "Nosotros"
+        ==================================================== -->
+        <section class="page-hero about-hero">
+            <div>
+                <span class="eyebrow">LUMA</span>
+                <h1>Nosotros</h1>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             BLOQUE 2 · HISTORIA DE LA MARCA
+             Solo TEXTO: eyebrow + título + párrafos
+        ==================================================== -->
+        <section class="section container about-intro">
+            <div class="section-heading">
+                <span class="eyebrow">Nuestra historia</span>
+                <h2>De una idea a LUMA</h2>
+            </div>
+            <p>LUMA nació de un sueño sencillo: crear joyas que no solo embellecen, sino que cuentan una historia.
+                Cada pieza está pensada para acompañar los momentos que más importan, con la calidez de lo hecho a
+                mano y el cuidado de los pequeños detalles.</p>
+            <p><!-- TODO(Jeferson): reemplazar con la historia real de LUMA que te cuente Gabi (cuándo y por qué
+                nació la marca, qué la inspiró, cómo fueron los primeros pasos). --></p>
+        </section>
+
+        <!-- ===================================================
+             BLOQUE 2.5 · CIFRAS
+             Solo TEXTO: 3 números destacados con su etiqueta.
+             "Premios y reconocimientos: 2" es un dato real (ver
+             bloque de Reconocimientos más abajo); los otros dos son
+             placeholders — ver TODO.
+        ==================================================== -->
+        <section class="section container">
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number"><!-- TODO(Jeferson): número real de joyas vendidas -->+250</span>
+                    <span class="stat-label">Joyas vendidas</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Premios y reconocimientos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number"><!-- TODO(Jeferson): años reales trabajando el oficio -->3</span>
+                    <span class="stat-label">Años de trayectoria</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             BLOQUE 3 · LA FUNDADORA
+             IMAGEN: 2 fotos reales de Gabi en el taller que se
+                      alternan solas cada 5s (crossfade en CSS, sin
+                      JS) — ver .heritage-slideshow en css/pages.css
+             TEXTO:  eyebrow + título "Gabi" + párrafos de bio
+             Layout de dos columnas (imagen | texto) que en móvil
+             se apila en una sola columna — ver .heritage en
+             css/pages.css.
+        ==================================================== -->
+        <section class="heritage">
+            <div class="heritage-slideshow">
+                <img src="assets/img/nosotros-taller-01.png" alt="Gabi, fundadora de LUMA, armando una joya a mano en su taller">
+                <img src="assets/img/nosotros-taller-02.png" alt="Gabi seleccionando cuentas y piedras para una nueva pieza">
+            </div>
+            <div class="heritage-copy">
+                <span class="eyebrow">La fundadora</span>
+                <h2>Gabi</h2>
+                <p>Detrás de cada joya LUMA está Gabi, quien convirtió su pasión por la artesanía y las piedras
+                    naturales en una marca que celebra la identidad de quien la lleva.</p>
+                <p><!-- TODO(Jeferson): reemplazar con la biografía real de Gabi (su trayectoria, motivación y
+                    visión para la marca). --></p>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             BLOQUE 3.5 · PROCESO DE CREACIÓN
+             Solo TEXTO: 4 pasos numerados, en fila en escritorio y
+             apilados en móvil — ver .process en css/pages.css.
+        ==================================================== -->
+        <section class="section container">
+            <div class="section-heading">
+                <span class="eyebrow">Cómo nace una joya</span>
+                <h2>Nuestro proceso</h2>
+            </div>
+            <ol class="process">
+                <li class="process-step">
+                    <span class="process-number">01</span>
+                    <h3>Diseño</h3>
+                    <p>Cada pieza empieza como un boceto a mano, pensando en la historia que va a acompañar.</p>
+                </li>
+                <li class="process-step">
+                    <span class="process-number">02</span>
+                    <h3>Selección de materiales</h3>
+                    <p>Elegimos piedras naturales y abalorios cuidando el color, la textura y el significado de cada
+                        uno.</p>
+                </li>
+                <li class="process-step">
+                    <span class="process-number">03</span>
+                    <h3>Armado a mano</h3>
+                    <p>Gabi arma cada joya hilo por hilo en su taller, sin líneas de producción en serie.</p>
+                </li>
+                <li class="process-step">
+                    <span class="process-number">04</span>
+                    <h3>Control de calidad</h3>
+                    <p>Antes de salir del taller, revisamos cada pieza a detalle para que llegue perfecta a ti.</p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- ===================================================
+             BLOQUE 3.6 · VALORES
+             Solo TEXTO + íconos SVG simples (sin librerías externas)
+             — ver .values en css/pages.css.
+        ==================================================== -->
+        <section class="section container">
+            <div class="section-heading">
+                <span class="eyebrow">Lo que nos define</span>
+                <h2>Nuestros valores</h2>
+            </div>
+            <div class="values">
+                <div class="value-card">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polygon points="12,2 22,9 12,22 2,9" />
+                    </svg>
+                    <h3>Hecho a mano</h3>
+                    <p>Sin líneas de producción en masa: cada joya pasa por manos artesanas.</p>
+                </div>
+                <div class="value-card">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path
+                            d="M12 21s-6.7-4.35-9.4-8.43C1.34 10.34 1 8.66 1 7a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 1.66-.34 3.34-1.6 5.57C18.7 16.65 12 21 12 21z" />
+                    </svg>
+                    <h3>Piedras naturales</h3>
+                    <p>Trabajamos con piedras y materiales naturales, eligiendo cada una con cuidado.</p>
+                </div>
+                <div class="value-card">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path
+                            d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z" />
+                        <circle cx="12" cy="9" r="2.5" />
+                    </svg>
+                    <h3>Identidad regional</h3>
+                    <p>Celebramos las raíces y la identidad de Lambayeque en cada colección.</p>
+                </div>
+                <div class="value-card">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path
+                            d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z" />
+                    </svg>
+                    <h3>Piezas únicas</h3>
+                    <p>No hacemos joyas en serie: cada pieza tiene su propio carácter.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             BLOQUE 4 · GALERÍA
+             TEXTO: eyebrow + título de la sección
+             IMÁGENES: 3 fotos reales — Gabi armando las piezas en su
+                       taller y el stand con las joyas terminadas en
+                       la Semana del Emprendedor; en escritorio la
+                       primera imagen ocupa el doble de alto, en
+                       móvil las 3 se apilan igual de tamaño — ver
+                       .about-gallery en css/pages.css.
+        ==================================================== -->
+        <section class="section container">
+            <div class="section-heading">
+                <span class="eyebrow">En imágenes</span>
+                <h2>Momentos de LUMA</h2>
+            </div>
+            <div class="about-gallery">
+                <img src="assets/img/nosotros-taller-02.png" alt="Gabi seleccionando cuentas y piedras para una nueva pieza">
+                <img src="assets/img/nosotros-feria.png" alt="Stand de LUMA con collares y pulseras en la Semana del Emprendedor">
+                <img src="assets/img/nosotros-premio-atipaq-trofeo.png" alt="Trofeo de LUMA como ganadora de ATIPAQ 2025">
+            </div>
+        </section>
+
+        <!-- ===================================================
+             BLOQUE 4.5 · RECONOCIMIENTOS / PREMIOS
+             TEXTO: eyebrow + título de la sección + copy de cada
+                    premio (nombre del concurso, resultado, entidad
+                    organizadora)
+             IMÁGENES: 2 fotos reales de las premiaciones (ATIPAQ 2025
+                       y EES - Emprendedores en Serie)
+             2 tarjetas en escritorio, 1 columna en móvil — ver
+             .awards / .award-card en css/pages.css.
+        ==================================================== -->
+        <section class="section container">
+            <div class="section-heading">
+                <span class="eyebrow">Nuestros logros</span>
+                <h2>Un trabajo reconocido</h2>
+            </div>
+            <div class="awards">
+                <article class="award-card">
+                    <img src="assets/img/nosotros-premio-atipaq-01.png"
+                        alt="Gabi con el trofeo de ATIPAQ 2025 en la ceremonia de premiación">
+                    <div class="award-copy">
+                        <span class="eyebrow">Concurso Nacional de Emprendimiento</span>
+                        <h3>Ganadora — ATIPAQ 2025</h3>
+                        <p><!-- TODO(Jeferson): confirmar con Gabi el detalle exacto (categoría, organizador) para
+                            este párrafo --> Reconocimiento nacional otorgado en la ceremonia ATIPAQ 2025 (Misión 3),
+                            organizada por la Universidad César Vallejo, a la trayectoria y propuesta de LUMA.</p>
+                    </div>
+                </article>
+                <article class="award-card">
+                    <img src="assets/img/nosotros-premio-ees.png"
+                        alt="Gabi con el cheque de premio Capital Semilla de Emprendedores en Serie">
+                    <div class="award-copy">
+                        <span class="eyebrow">Feria Regional · Semana del Emprendedor</span>
+                        <h3>2° puesto — Identidad Regional</h3>
+                        <p><!-- TODO(Jeferson): confirmar con Gabi el detalle exacto para este párrafo -->Premio
+                            Capital Semilla otorgado por Emprendedores en Serie (EES), con el respaldo de la
+                            Cámara de Comercio y Producción de Lambayeque y PRO innóvate.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             BLOQUE 4.6 · TESTIMONIOS
+             Solo TEXTO: 3 tarjetas de testimonio (placeholders, ver
+             TODO) — ver .testimonials en css/pages.css.
+        ==================================================== -->
+        <section class="section container">
+            <div class="section-heading">
+                <span class="eyebrow">Lo que dicen de nosotros</span>
+                <h2>Clientas felices</h2>
+            </div>
+            <div class="testimonials">
+                <blockquote class="testimonial">
+                    <p>“<!-- TODO(Jeferson): reemplazar con un testimonio real de clienta -->El collar que compré
+                        llegó incluso más bonito que en las fotos. Se nota el cuidado en cada detalle.”</p>
+                    <cite><!-- TODO(Jeferson): nombre real de la clienta -->— Clienta LUMA</cite>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p>“<!-- TODO(Jeferson): reemplazar con un testimonio real de clienta -->Le regalé unos aretes a
+                        mi mamá y no se los quiso quitar en todo el día. Un trabajo hermoso.”</p>
+                    <cite><!-- TODO(Jeferson): nombre real de la clienta -->— Clienta LUMA</cite>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p>“<!-- TODO(Jeferson): reemplazar con un testimonio real de clienta -->Me encanta que cada
+                        pieza sea única. Ya es la tercera vez que compro y siempre quedo feliz.”</p>
+                    <cite><!-- TODO(Jeferson): nombre real de la clienta -->— Clienta LUMA</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             BLOQUE 5 · CITA DE LA FUNDADORA
+             Solo TEXTO: frase destacada + firma
+        ==================================================== -->
+        <section class="section container">
+            <blockquote class="founder-quote">
+                <p>“<!-- TODO(Jeferson): reemplazar con una frase real de Gabi sobre su visión de LUMA -->Cada joya
+                    que creamos lleva un pedazo de nuestra historia.”</p>
+                <cite>— Gabi, fundadora de LUMA</cite>
+            </blockquote>
+        </section>
+
+        <!-- ===================================================
+             BLOQUE 6 · CTA FINAL
+             Solo TEXTO + botón, invitando a ver las colecciones —
+             ver .about-cta en css/pages.css.
+        ==================================================== -->
+        <section class="section about-cta">
+            <div class="container">
+                <span class="eyebrow">Descubre más</span>
+                <h2>Encuentra la joya perfecta para ti</h2>
+                <a class="button" href="colecciones.html">Ver colecciones</a>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div><a class="brand" href="index.html">LU<span>•</span>MA</a>
+                    <p>Joyería artesanal que celebra la belleza de las piedras, los detalles y las historias que nos
+                        acompañan.</p>
+                </div>
+                <div>
+                    <h3>Explorar</h3><a href="aretes.html">Aretes</a><a href="collares.html">Collares</a><a
+                        href="pulseras.html">Pulseras</a><a href="tobilleras.html">Tobilleras</a>
+                </div>
+                <div>
+                    <h3>Servicio</h3><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a>
+                </div>
+                <div>
+                    <h3>Newsletter</h3>
+                    <p>Recibe novedades y piezas especiales.</p>
+                    <form class="newsletter" data-newsletter><input required type="email"
+                            aria-label="Correo electrónico" placeholder="Tu correo electrónico"><button
+                            aria-label="Suscribirme">→</button></form>
+                    <div class="newsletter-message" data-newsletter-message></div>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 LUMA Joyería</span></div>
+        </div>
+    </footer>
+</body>
+
+</html>
