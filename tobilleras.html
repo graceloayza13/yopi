@@ -52,10 +52,22 @@
                 </div>
                 <p data-product-count>1 Producto</p>
             </div>
-            <div class="tabs" role="tablist"><button class="active" data-season="all">Todas</button><button
-                    data-season="verano">Verano</button><button data-season="invierno">Invierno</button></div>
+            <div class="tabs" role="tablist">
+                <button data-tags="damas">Damas</button>
+                <button data-tags="caballeros">Caballeros</button>
+                <div class="filter-dropdown">
+                    <button class="filter-dropdown-toggle" type="button" aria-haspopup="true"
+                        aria-expanded="false"><span data-filter-label>Más filtros</span></button>
+                    <div class="filter-dropdown-menu">
+                        <button data-tags="all">Todas</button>
+                        <button data-tags="verano">Verano</button>
+                        <button data-tags="invierno">Invierno</button>
+                        <button data-tags="otoño">Otoño</button>
+                    </div>
+                </div>
+            </div>
             <div class="product-grid" data-product-grid>
-                <article class="product-card" data-season="verano"><a
+                <article class="product-card" data-tags="verano damas"><a
                         href="producto.html?producto=tobillera-amor-eterno"><img
                             src="assets/img/tobillera-amor-eterno.png" alt="Tobillera Amor Eterno"><span
                             class="button view-product">Ver producto</span></a>

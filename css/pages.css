@@ -1,64 +1,118 @@
 .hero {
+    position: relative;
+    overflow: hidden;
     min-height: min(720px, 72vw);
     display: grid;
     place-items: center;
-    background: linear-gradient(rgb(25 24 20 / .14), rgb(25 24 20 / .14)), url("../assets/img/home-hero.png") center/cover;
     color: var(--white);
     text-align: center;
 }
-
+ 
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(25 24 20 / .14);
+    z-index: 1;
+}
+ 
+.hero-slides {
+    position: absolute;
+    inset: 0;
+}
+ 
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background: center/cover no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+ 
+.hero-slide.is-active {
+    opacity: 1;
+}
+ 
+.hero-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 22px;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    gap: 8px;
+}
+ 
+.hero-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 1px solid rgb(255 255 255 / .8);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition: transform .25s, background .25s;
+}
+ 
+.hero-dot.is-active {
+    background: var(--white);
+    transform: scale(1.2);
+}
+ 
 .hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 610px;
 }
-
+ 
 .hero h1 {
     margin: 12px 0 19px;
     font: 500 clamp(44px, 6vw, 76px)/1.03 var(--serif);
 }
-
+ 
 .hero p {
     max-width: 430px;
     margin: 0 auto 26px;
 }
-
+ 
 .hero .eyebrow {
     color: #e9d774;
 }
-
+ 
 .hero .button {
     border-color: var(--ink);
     background: var(--ink);
     color: var(--white);
 }
-
+ 
 .hero .button:hover {
     border-color: var(--white);
     background: transparent;
     color: var(--white);
 }
-
+ 
 .category-teasers {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 18px;
 }
-
+ 
 .category-teaser {
     position: relative;
     overflow: hidden;
     color: var(--white);
 }
-
+ 
 .category-teaser img {
     aspect-ratio: .82;
     object-fit: cover;
     transition: .3s;
 }
-
+ 
 .category-teaser:hover img {
     transform: scale(1.05);
 }
-
+ 
 .category-teaser span {
     position: absolute;
     inset: auto 0 0;
@@ -67,34 +121,34 @@
     background: linear-gradient(transparent, rgb(0 0 0 / .6));
     font: 500 25px var(--serif);
 }
-
+ 
 .heritage {
     display: grid;
     grid-template-columns: 1.05fr 1fr;
     background: var(--bg-alt);
 }
-
+ 
 .heritage img {
     height: 100%;
     min-height: 440px;
     object-fit: cover;
 }
-
+ 
 .heritage-copy {
     display: grid;
     align-content: center;
     padding: clamp(45px, 7vw, 110px);
 }
-
+ 
 .heritage h2 {
     margin: 14px 0;
     font: 500 clamp(31px, 4vw, 48px)/1.15 var(--serif);
 }
-
+ 
 .heritage p {
     color: var(--muted);
 }
-
+ 
 .page-hero {
     min-height: 300px;
     display: grid;
@@ -104,47 +158,47 @@
     color: var(--white);
     text-align: center;
 }
-
+ 
 .page-hero h1 {
     margin: 8px 0 0;
     font: 500 clamp(37px, 5vw, 62px) var(--serif);
 }
-
+ 
 .listing-toolbar {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     border-bottom: 1px solid var(--line);
 }
-
+ 
 .listing-toolbar p {
     color: var(--muted);
     font-size: 12px;
 }
-
+ 
 .collections-hero {
     --hero-image: url("../assets/img/home-hero.png");
 }
-
+ 
 .product-detail {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: clamp(35px, 7vw, 105px);
     padding: 70px 0 95px;
 }
-
+ 
 .detail-image {
     position: relative;
     overflow: hidden;
     background: var(--bg-alt);
 }
-
+ 
 .detail-image img {
     width: 100%;
     max-height: 680px;
     object-fit: cover;
 }
-
+ 
 .back-link {
     display: inline-block;
     margin-bottom: 38px;
@@ -153,18 +207,18 @@
     letter-spacing: .08em;
     text-transform: uppercase;
 }
-
+ 
 .product-script {
     margin: 0;
     color: var(--gold);
     font: 52px/1 var(--script);
 }
-
+ 
 .detail-info h1 {
     margin: 7px 0 4px;
     font: 500 clamp(35px, 4vw, 55px)/1.1 var(--serif);
 }
-
+ 
 .detail-info .category-name {
     color: var(--gold);
     font-size: 10px;
@@ -172,129 +226,132 @@
     letter-spacing: .16em;
     text-transform: uppercase;
 }
-
+ 
 .product-price {
     margin: 13px 0;
     color: var(--gold);
     font: 500 20px var(--serif);
 }
-
+ 
 .detail-info .description {
     margin: 24px 0;
     color: var(--muted);
 }
-
+ 
 .properties {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     margin: 35px 0;
 }
-
+ 
 .property {
     border-top: 1px solid var(--line);
     padding-top: 14px;
 }
-
+ 
 .property h3 {
     margin: 0 0 7px;
     color: var(--gold);
     font: 500 18px var(--serif);
 }
-
+ 
 .property p {
     margin: 0;
     color: var(--muted);
     font-size: 12px;
 }
-
+ 
 .contact-hero {
     --hero-image: url("../assets/img/contact-hero.png");
     min-height: 390px;
 }
-
+ 
 .contact-grid {
     display: grid;
     grid-template-columns: 1.1fr .9fr;
     gap: 25px;
 }
-
+ 
 .contact-card {
     padding: clamp(30px, 5vw, 65px);
     background: var(--bg-alt);
 }
-
+ 
 .contact-card h2 {
     margin: 12px 0;
     font: 500 37px/1.15 var(--serif);
 }
-
+ 
 .contact-card p {
     color: var(--muted);
 }
-
+ 
 .socials {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
 }
-
+ 
 .social {
     border: 1px solid var(--line);
     padding: 21px;
     background: var(--bg);
     font: 500 18px var(--serif);
 }
-
+ 
 .social:hover {
     color: var(--gold);
     border-color: var(--gold);
 }
-
+ 
 @media (max-width: 700px) {
     .hero {
         min-height: 600px;
+    }
+ 
+    .hero-slide {
         background-position: 57% center;
     }
-
+ 
     .hero h1 {
         font-size: 48px;
     }
-
+ 
     .category-teasers {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
-
+ 
     .category-teaser span {
         font-size: 22px;
     }
-
+ 
     .heritage {
         grid-template-columns: 1fr;
     }
-
+ 
     .heritage img {
         min-height: 330px;
     }
-
+ 
     .page-hero {
         min-height: 250px;
     }
-
+ 
     .listing-toolbar {
         display: block;
     }
-
+ 
     .product-detail {
         grid-template-columns: 1fr;
         padding: 35px 0 65px;
     }
-
+ 
     .back-link {
         margin-bottom: 24px;
     }
-
+ 
     .detail-image {
         order: -1;
     }
@@ -302,35 +359,40 @@
     .gallery-track img {
     height: 420px;
 }
-
+ 
     .contact-grid {
         grid-template-columns: 1fr;
     }
-
+ 
     .contact-hero {
         min-height: 280px;
     }
-
+ 
     .socials {
         grid-template-columns: 1fr 1fr;
     }
 }
-
-
-
+ 
+ 
+ 
 .carousel {
     position: relative;
 }
-
+ 
 .carousel-container {
     width: 100%;
     overflow: hidden;
 }
-
+ 
 .carousel-track {
     display: flex;
     transition: transform .5s ease;
 }
+ 
+.carousel-track .product-card:hover img {
+    filter: none;
+}
+
 
 .product-card {
     flex: 0 0 calc(100% / 3);
@@ -338,48 +400,48 @@
     padding: 10px;
     box-sizing: border-box;
 }
-
+ 
 .product-card img {
     width: 100%;
     border-radius: 12px;
     display: block;
 }
-
+ 
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-
+ 
     width: 50px;
     height: 50px;
-
+ 
     border: none;
     background: rgba(255, 255, 255, .2);
     color: white;
     font-size: 38px;
     font-weight: bold;
     cursor: pointer;
-
+ 
     display: flex;
     justify-content: center;
     align-items: center;
-
+ 
     transition: .3s;
 }
-
+ 
 .carousel-btn:hover {
     background: rgba(255, 255, 255, .35);
 }
-
+ 
 .prev {
     left: 10px;
 }
-
+ 
 .next {
     right: 10px;
 }
-
+ 
 /* ==========================================================
    PÁGINA NOSOTROS
    Estructura de la página:
@@ -389,7 +451,7 @@
    4) Galería      -> Solo IMÁGENES (3 fotos del taller/proceso)
    5) Cita         -> Solo TEXTO (frase destacada de la fundadora)
 ========================================================== */
-
+ 
 /* 1) Hero: usa el mismo componente .page-hero de las demás páginas
    internas (mismo alto, misma superposición oscura sobre la imagen);
    solo se define aquí la imagen de fondo propia de esta sección.
@@ -397,24 +459,24 @@
 .about-hero {
     --hero-image: url("../assets/img/home-hero.png");
 }
-
+ 
 /* 2) Intro / historia: bloque de texto centrado, ancho de lectura cómodo */
 .about-intro {
     max-width: 720px;
     margin-inline: auto;
     text-align: center;
 }
-
+ 
 .about-intro .section-heading {
     margin-inline: auto;
 }
-
+ 
 .about-intro p {
     margin: 0 0 18px;
     color: var(--muted);
     text-align: left;
 }
-
+ 
 /* 2.5) Cifras: 3 números destacados en fila (1 columna en móvil) */
 .stats {
     display: grid;
@@ -422,26 +484,26 @@
     gap: 20px;
     text-align: center;
 }
-
+ 
 .stat {
     display: grid;
     gap: 6px;
     padding: 30px 20px;
     background: var(--bg-alt);
 }
-
+ 
 .stat-number {
     font: 500 clamp(34px, 4vw, 46px)/1 var(--serif);
     color: var(--gold);
 }
-
+ 
 .stat-label {
     color: var(--muted);
     font-size: 13px;
     letter-spacing: .04em;
     text-transform: uppercase;
 }
-
+ 
 /* 3) Fundadora: reutiliza el componente compartido .heritage
    (misma estructura visual que en Inicio y Colecciones: IMAGEN a la
    izquierda, TEXTO a la derecha) sin sobreescribir sus estilos base.
@@ -453,7 +515,7 @@
     min-height: 440px;
     overflow: hidden;
 }
-
+ 
 .heritage-slideshow img {
     position: absolute;
     inset: 0;
@@ -463,31 +525,31 @@
     opacity: 0;
     animation: heritage-fade 10s infinite;
 }
-
+ 
 .heritage-slideshow img:first-child {
     animation-delay: 0s;
 }
-
+ 
 .heritage-slideshow img:last-child {
     animation-delay: -5s;
 }
-
+ 
 @keyframes heritage-fade {
     0%, 42% { opacity: 1; }
     50%, 92% { opacity: 0; }
     100% { opacity: 1; }
 }
-
+ 
 @media (prefers-reduced-motion: reduce) {
     .heritage-slideshow img {
         animation: none;
     }
-
+ 
     .heritage-slideshow img:first-child {
         opacity: 1;
     }
 }
-
+ 
 /* 4) Galería de imágenes: 3 fotos, la primera ocupa el doble de alto */
 .about-gallery {
     display: grid;
@@ -495,36 +557,36 @@
     grid-template-rows: repeat(2, 220px);
     gap: 18px;
 }
-
+ 
 .about-gallery img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: .3s;
 }
-
+ 
 .about-gallery img:first-child {
     grid-row: 1 / 3;
 }
-
+ 
 .about-gallery img:hover {
     transform: scale(1.02);
 }
-
+ 
 /* 5) Cita de la fundadora: texto destacado y centrado */
 .founder-quote {
     max-width: 720px;
     margin-inline: auto;
     text-align: center;
 }
-
+ 
 .founder-quote p {
     margin: 0;
     color: var(--ink);
     font: 500 clamp(22px, 3vw, 32px)/1.5 var(--serif);
     font-style: italic;
 }
-
+ 
 .founder-quote cite {
     display: block;
     margin-top: 20px;
@@ -535,7 +597,7 @@
     letter-spacing: .1em;
     text-transform: uppercase;
 }
-
+ 
 /* Proceso de creación: pasos numerados en fila (1 columna en móvil) */
 .process {
     display: grid;
@@ -545,30 +607,30 @@
     padding: 0;
     margin: 0;
 }
-
+ 
 .process-step {
     padding-top: 22px;
     border-top: 2px solid var(--gold);
 }
-
+ 
 .process-number {
     display: block;
     margin-bottom: 10px;
     color: var(--gold);
     font: 500 22px/1 var(--serif);
 }
-
+ 
 .process-step h3 {
     margin: 0 0 8px;
     font: 500 19px/1.25 var(--serif);
 }
-
+ 
 .process-step p {
     margin: 0;
     color: var(--muted);
     font-size: 14px;
 }
-
+ 
 /* Valores: tarjetas con ícono, título y texto (1 columna en móvil) */
 .values {
     display: grid;
@@ -576,45 +638,45 @@
     gap: 30px;
     text-align: center;
 }
-
+ 
 .value-icon {
     width: 34px;
     height: 34px;
     margin: 0 auto 16px;
     color: var(--gold);
 }
-
+ 
 .value-card h3 {
     margin: 0 0 8px;
     font: 500 18px/1.25 var(--serif);
 }
-
+ 
 .value-card p {
     margin: 0;
     color: var(--muted);
     font-size: 14px;
 }
-
+ 
 /* Testimonios: tarjetas de cita (1 columna en móvil) */
 .testimonials {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
-
+ 
 .testimonial {
     margin: 0;
     padding: 30px 26px;
     background: var(--bg-alt);
 }
-
+ 
 .testimonial p {
     margin: 0 0 16px;
     color: var(--ink);
     font: 400 15px/1.6 var(--sans);
     font-style: italic;
 }
-
+ 
 .testimonial cite {
     color: var(--gold);
     font-size: 12px;
@@ -622,104 +684,104 @@
     font-weight: 600;
     letter-spacing: .04em;
 }
-
+ 
 /* CTA final: banda con fondo, centrada, botón hacia colecciones */
 .about-cta {
     background: var(--bg-alt);
     text-align: center;
 }
-
+ 
 .about-cta h2 {
     margin: 10px 0 26px;
     font: 500 clamp(28px, 3.6vw, 40px)/1.2 var(--serif);
 }
-
+ 
 /* Reconocimientos / premios: 2 tarjetas con foto + copy */
 .awards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
-
+ 
 .award-card {
     background: var(--bg-alt);
     border-top: 2px solid var(--gold);
 }
-
+ 
 .award-card img {
     height: 260px;
     object-fit: cover;
     object-position: top;
 }
-
+ 
 .award-copy {
     padding: 26px 28px 30px;
 }
-
+ 
 .award-copy .eyebrow {
     margin-bottom: 4px;
 }
-
+ 
 .award-copy h3 {
     margin: 6px 0 12px;
     font: 500 clamp(20px, 2.4vw, 26px)/1.2 var(--serif);
 }
-
+ 
 .award-copy p {
     margin: 0;
     color: var(--muted);
 }
-
+ 
 @media (max-width: 700px) {
     .about-gallery {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
-
+ 
     .about-gallery img:first-child {
         grid-row: auto;
     }
-
+ 
     .about-gallery img {
         height: 220px;
     }
-
+ 
     .awards {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-
+ 
     .award-card img {
         height: 220px;
     }
-
+ 
     .stats {
         grid-template-columns: 1fr;
     }
-
+ 
     .process,
     .values {
         grid-template-columns: 1fr 1fr;
     }
-
+ 
     .testimonials {
         grid-template-columns: 1fr;
     }
 }
-
+ 
 @media (max-width: 480px) {
     .process,
     .values {
         grid-template-columns: 1fr;
     }
 }
-
+ 
 .gallery-track {
     display: flex;
     height: 100%;
     transition: transform .45s ease;
 }
-
+ 
 .gallery-track img {
     flex: 0 0 100%;
     width: 100%;
@@ -728,11 +790,11 @@
     cursor: zoom-in;
     transition: transform .25s ease;
 }
-
+ 
 .gallery-track img:hover {
     transform: scale(1.8);
 }
-
+ 
 .gallery-nav {
     position: absolute;
     top: 50%;
@@ -751,20 +813,20 @@
     transform: translateY(-50%);
     transition: .2s;
 }
-
+ 
 .gallery-nav:hover {
     background: rgb(255 255 255 / 65%);
     color: var(--gold);
 }
-
+ 
 .gallery-nav.prev {
     left: 14px;
 }
-
+ 
 .gallery-nav.next {
     right: 14px;
 }
-
+ 
 .gallery-dots {
     position: absolute;
     left: 0;
@@ -775,7 +837,7 @@
     justify-content: center;
     gap: 7px;
 }
-
+ 
 .gallery-dots button {
     width: 7px;
     height: 7px;
@@ -784,7 +846,7 @@
     border-radius: 50%;
     background: rgb(255 255 255 / 65%);
 }
-
+ 
 .gallery-dots button.active {
     background: var(--gold);
 }
