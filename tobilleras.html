@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/filters.css">
     <script defer src="js/data/products.js"></script>
     <script defer src="js/app.js"></script>
+    <script defer src="js/filters.js"></script>
 </head>
 
 <body>
@@ -54,49 +56,27 @@
             </div>
 
             <div class="tabs" role="tablist">
-                <button data-tags="contemporaneas">
-                    Contemporáneas
-                </button>
-
-                <button data-tags="culturales">
-                    Culturales
-                </button>
-
-                <button data-tags="damas">
-                    Damas
-                </button>
-
-                <button data-tags="caballeros">
-                    Caballeros
-                </button>
-
-                <div class="filter-dropdown">
-                    <button
-                        class="filter-dropdown-toggle"
-                        type="button"
-                        aria-haspopup="true"
-                        aria-expanded="false">
-                        <span data-filter-label>
-                            Más filtros
-                        </span>
-                    </button>
-
-                    <div class="filter-dropdown-menu">
-                        <button data-tags="all">
-                            Todas
-                        </button>
-                        <button data-tags="verano">
-                            Verano
-                        </button>
-                        <button data-tags="invierno">
-                            Invierno
-                        </button>
-                        <button data-tags="otoño">
-                            Otoño
-                        </button>
-                        <button data-tags="ninos">
-                            Niños
-                        </button>
+                <div class="tabs-left">
+                    <div class="filter-group" data-filter-group="grupo1">
+                        <button data-tags="contemporaneas">Contemporáneas<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
+                        <button data-tags="culturales">Culturales<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
+                    </div>
+                    <div class="filter-group" data-filter-group="grupo2">
+                        <button data-tags="damas">Damas<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
+                        <button data-tags="caballeros">Caballeros<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
+                        <button data-tags="ninos">Niños<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
+                    </div>
+                    <div class="filter-group" data-filter-group="grupo3">
+                        <button data-tags="verano">Verano<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
+                        <button data-tags="otoño">Otoño<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
+                        <button data-tags="invierno">Invierno<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
+                    </div>
+                </div>
+                <div class="filter-sort">
+                    <button class="filter-sort-button" type="button" aria-haspopup="true" aria-expanded="false"><span class="filter-sort-icon" aria-hidden="true">⚗</span><span data-filter-sort-label="">Ordenar</span></button>
+                    <div class="filter-sort-menu">
+                        <button type="button" data-sort="price-asc">Menor a mayor precio</button>
+                        <button type="button" data-sort="price-desc">Mayor a menor precio</button>
                     </div>
                 </div>
             </div>
@@ -114,6 +94,7 @@
             </div>
         </section>
     </main>
+    
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">

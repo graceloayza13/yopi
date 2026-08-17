@@ -53,7 +53,8 @@
  
   
 const productGrid = document.querySelector("[data-product-grid]");
-if (productGrid) {
+const usesGroupFilters = !!document.querySelector("[data-filter-group]");
+if (productGrid && !usesGroupFilters) {
   const PRODUCTS_PER_PAGE = 12;
   const allCards = [...productGrid.querySelectorAll(".product-card")];
   const countLabel = document.querySelector("[data-product-count]");
