@@ -305,73 +305,7 @@
     border-color: var(--gold);
 }
  
-@media (max-width: 700px) {
-    .hero {
-        min-height: 600px;
-    }
- 
-    .hero-slide {
-        background-position: 57% center;
-    }
- 
-    .hero h1 {
-        font-size: 48px;
-    }
- 
-    .category-teasers {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
- 
-    .category-teaser span {
-        font-size: 22px;
-    }
- 
-    .heritage {
-        grid-template-columns: 1fr;
-    }
- 
-    .heritage img {
-        min-height: 330px;
-    }
- 
-    .page-hero {
-        min-height: 250px;
-    }
- 
-    .listing-toolbar {
-        display: block;
-    }
- 
-    .product-detail {
-        grid-template-columns: 1fr;
-        padding: 35px 0 65px;
-    }
- 
-    .back-link {
-        margin-bottom: 24px;
-    }
- 
-    .detail-image {
-        order: -1;
-    }
-    
-    .gallery-track img {
-    height: 420px;
-}
- 
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
- 
-    .contact-hero {
-        min-height: 280px;
-    }
- 
-    .socials {
-        grid-template-columns: 1fr 1fr;
-    }
-}
+
  
  
  
@@ -392,7 +326,6 @@
 .carousel-track .product-card:hover img {
     filter: none;
 }
-
 
 .product-card {
     flex: 0 0 calc(100% / 3);
@@ -732,49 +665,9 @@
     color: var(--muted);
 }
  
-@media (max-width: 700px) {
-    .about-gallery {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
+
  
-    .about-gallery img:first-child {
-        grid-row: auto;
-    }
- 
-    .about-gallery img {
-        height: 220px;
-    }
- 
-    .awards {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
- 
-    .award-card img {
-        height: 220px;
-    }
- 
-    .stats {
-        grid-template-columns: 1fr;
-    }
- 
-    .process,
-    .values {
-        grid-template-columns: 1fr 1fr;
-    }
- 
-    .testimonials {
-        grid-template-columns: 1fr;
-    }
-}
- 
-@media (max-width: 480px) {
-    .process,
-    .values {
-        grid-template-columns: 1fr;
-    }
-}
+
  
 .gallery-track {
     display: flex;

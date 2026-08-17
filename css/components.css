@@ -124,15 +124,20 @@
     inset: 0 auto 0 0;
     z-index: 21;
     width: min(320px, 86vw);
+    height: 100vh;
+    height: 100dvh;
     padding: 27px;
     background: var(--bg);
     box-shadow: var(--shadow);
-    transform: translateX(-105%);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translate3d(-105%, 0, 0);
+    will-change: transform;
     transition: .3s ease;
 }
  
 .drawer.open {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
 }
  
 .drawer-head {
@@ -417,78 +422,7 @@
     color: var(--muted);
     font-size: 11px;
 }
- 
-@media (max-width: 480px) {
-    .pagination-btn {
-        min-width: 40px;
-        height: 40px;
-    }
-}
- 
-@media (max-width: 700px) {
-    .site-header {
-        height: 66px;
-    }
- 
-    .header-inner {
-        grid-template-columns: 1fr 70px 1fr;
-        column-gap: 0;
-    }
- 
-    .menu-button,
-    .mobile-bag {
-        display: block;
-    }
- 
-    .nav,
-    .header-actions {
-        display: none;
-    }
- 
-    .brand {
-        width: 66px;
-        height: 50px;
-        justify-self: center;
-    }
- 
-    .footer {
-        padding-top: 46px;
-    }
- 
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
- 
-    .footer-grid> :not(:first-child) {
-        display: none;
-    }
- 
-    .footer-bottom {
-        margin-top: 25px;
-    }
- 
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-    }
- 
-    .product-card h3 {
-        font-size: 17px;
-    }
- 
-    .product-card .view-product {
-        opacity: 1;
-        transform: none;
-        inset: auto 9px 9px;
-        padding: 0 10px;
-        min-height: 35px;
-    }
- 
-    .tabs {
-        overflow-x: auto;
-    }
-}
- 
+
 /* La sección "Nosotros" (hero, historia, fundadora, galería y cita)
    se estilizó en css/pages.css, junto a las demás páginas internas
    del sitio (contacto, colecciones, producto), para reutilizar las

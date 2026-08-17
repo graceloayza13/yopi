@@ -15,6 +15,11 @@ body {
 
 body.is-locked {
     overflow: hidden;
+    /* Evita que el scroll suave (html { scroll-behavior:smooth }) se
+       dispare mientras el drawer está abierto y bloqueado — es lo que
+       provocaba que el sidebar se comportara distinto en Inicio
+       (única página con salto a #collections). */
+    scroll-behavior: auto;
 }
 
 button,
@@ -97,14 +102,4 @@ img {
     padding: 64px 0;
     color: var(--muted);
     text-align: center;
-}
-
-@media (max-width: 700px) {
-    :root {
-        --page: min(100% - 32px, 560px);
-    }
-
-    .section {
-        padding: 58px 0;
-    }
 }
