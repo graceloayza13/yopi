@@ -68,10 +68,10 @@ img {
     align-items: center;
     justify-content: center;
     min-height: 48px;
-    border: 1px solid var(--olive);
+    border: 1px solid var(--fill);
     padding: 0 24px;
-    background: var(--olive);
-    color: var(--white);
+    background: var(--fill);
+    color: var(--fill-text);
     font-size: 10px;
     font-weight: 600;
     letter-spacing: .16em;
@@ -81,7 +81,7 @@ img {
 
 .button:hover {
     background: transparent;
-    color: var(--olive);
+    color: var(--fill);
 }
 
 .section {

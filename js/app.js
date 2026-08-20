@@ -7,6 +7,23 @@
   document.querySelector("#close-menu")?.addEventListener("click", () => setDrawer(false));
   backdrop?.addEventListener("click", () => setDrawer(false));
  
+  // ---- Modo oscuro ----
+const THEME_KEY = "luma-theme";
+const root = document.documentElement;
+const applyTheme = (theme) => {
+  root.setAttribute("data-theme", theme);
+  document.querySelectorAll(".theme-toggle").forEach((btn) => {
+    btn.classList.toggle("is-active", theme === "dark");
+    btn.setAttribute("aria-pressed", theme === "dark");
+  });
+};
+applyTheme(localStorage.getItem(THEME_KEY) === "dark" ? "dark" : "light");
+document.querySelectorAll(".theme-toggle").forEach((btn) => btn.addEventListener("click", () => {
+  const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  localStorage.setItem(THEME_KEY, next);
+  applyTheme(next);
+}));
+
   // ---- Carrusel de imagen del hero ----
   const heroCarousel = document.querySelector("[data-hero-carousel]");
   if (heroCarousel) {

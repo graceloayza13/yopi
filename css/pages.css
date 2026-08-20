@@ -698,7 +698,7 @@
     width: 32px;
     height: 76px;
     border: 0;
-    background: rgb(255 255 255 / 40%);
+    background: color-mix(in srgb, var(--bg) 40%, transparent);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     color: var(--ink);
@@ -708,7 +708,7 @@
 }
  
 .gallery-nav:hover {
-    background: rgb(255 255 255 / 65%);
+    background: color-mix(in srgb, var(--bg) 65%, transparent);
     color: var(--gold);
 }
  

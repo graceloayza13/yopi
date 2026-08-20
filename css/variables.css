@@ -1,6 +1,21 @@
 :root {
   --bg: #f8f7f3; --bg-alt: #efece7; --ink: #1a1a18; --muted: #4a4a42;
   --gold: #7a6a1f; --olive: #4d4634; --line: #dad5cc; --white: #fff;
+  --fill: var(--olive); --fill-text: var(--white);
+  --logo-url: url("../assets/img/logo luma-Photoroom.png");
   --serif: "Playfair Display", Georgia, serif; --sans: Poppins, Arial, sans-serif; --script: "Alex Brush", cursive;
   --page: min(1180px, calc(100% - 48px)); --shadow: 0 12px 35px rgb(26 26 24 / 12%);
+  --theme-transition: background-color .3s, color .3s, border-color .3s, box-shadow .3s;
+}
+
+html[data-theme="dark"] {
+  --bg: #1b1815; --bg-alt: #262220; --ink: #f2ede2; --muted: #b7ada0;
+  --gold: #d4b56a; --olive: #cbb27e; --line: #3d382f;
+  --fill: #d4b56a; --fill-text: #1b1815;
+  --logo-url: url("../assets/img/logo-luma-oscuro.png");
+  --shadow: 0 12px 35px rgb(0 0 0 / 45%);
+}
+
+html, body {
+  transition: var(--theme-transition);
 }
