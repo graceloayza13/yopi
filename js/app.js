@@ -8,21 +8,31 @@
   backdrop?.addEventListener("click", () => setDrawer(false));
  
   // ---- Modo oscuro ----
-const THEME_KEY = "luma-theme";
-const root = document.documentElement;
-const applyTheme = (theme) => {
-  root.setAttribute("data-theme", theme);
-  document.querySelectorAll(".theme-toggle").forEach((btn) => {
-    btn.classList.toggle("is-active", theme === "dark");
-    btn.setAttribute("aria-pressed", theme === "dark");
-  });
-};
-applyTheme(localStorage.getItem(THEME_KEY) === "dark" ? "dark" : "light");
-document.querySelectorAll(".theme-toggle").forEach((btn) => btn.addEventListener("click", () => {
-  const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-  localStorage.setItem(THEME_KEY, next);
-  applyTheme(next);
-}));
+  const THEME_KEY = "luma-theme";
+  const root = document.documentElement;
+  const THEME_TRANSITION_MS = 600; // debe coincidir con --theme-transition en variables.css
+  let themeTransitionTimer = null;
+
+  const syncToggleButtons = (theme) => {
+    document.querySelectorAll(".theme-toggle").forEach((btn) => {
+      btn.classList.toggle("is-active", theme === "dark");
+      btn.setAttribute("aria-pressed", theme === "dark");
+    });
+  };
+
+  syncToggleButtons(root.getAttribute("data-theme") === "dark" ? "dark" : "light");
+
+  document.querySelectorAll(".theme-toggle").forEach((btn) => btn.addEventListener("click", () => {
+    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    localStorage.setItem(THEME_KEY, next);
+    root.classList.add("theme-transitioning");
+    root.setAttribute("data-theme", next);
+    syncToggleButtons(next);
+    clearTimeout(themeTransitionTimer);
+    themeTransitionTimer = window.setTimeout(() => {
+      root.classList.remove("theme-transitioning");
+    }, THEME_TRANSITION_MS);
+  }));
 
   // ---- Carrusel de imagen del hero ----
   const heroCarousel = document.querySelector("[data-hero-carousel]");

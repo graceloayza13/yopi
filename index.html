@@ -2,6 +2,12 @@
 <html lang="es">
 
 <head>
+  <script>(function () {
+      try { var t = localStorage.getItem("luma-theme") === "dark" ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) { }
+      var silence = function (ev) { try { ev.viewTransition && ev.viewTransition.ready.catch(function () { }); ev.viewTransition && ev.viewTransition.finished.catch(function () { }); } catch (e) { } };
+      window.addEventListener("pageswap", silence);
+      window.addEventListener("pagereveal", silence);
+    })();</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="LUMA - Joyería artesanal con historia.">
@@ -57,10 +63,14 @@
   <main>
     <section class="hero" data-hero-carousel>
       <div class="hero-slides">
-        <div class="hero-slide is-active" style="background-image: url('assets/img/imagenes-presentacion/brisa-terracota-2.png')"></div>
-        <div class="hero-slide is-active" style="background-image: url('assets/img/imagenes-presentacion/cruz-carmesi-dorada-1.png')"></div>
-        <div class="hero-slide is-active" style="background-image: url('assets/img/imagenes-presentacion/armonia-madera-2.png')"></div>
-        <div class="hero-slide is-active" style="background-image: url('assets/img/imagenes-presentacion/susurro-de-renata-3.png')"></div>
+        <div class="hero-slide is-active"
+          style="background-image: url('assets/img/imagenes-presentacion/brisa-terracota-2.png')"></div>
+        <div class="hero-slide is-active"
+          style="background-image: url('assets/img/imagenes-presentacion/cruz-carmesi-dorada-1.png')"></div>
+        <div class="hero-slide is-active"
+          style="background-image: url('assets/img/imagenes-presentacion/armonia-madera-2.png')"></div>
+        <div class="hero-slide is-active"
+          style="background-image: url('assets/img/imagenes-presentacion/susurro-de-renata-3.png')"></div>
 
       </div>
       <div class="container hero-content"><span class="eyebrow">Joyería con historia</span>
@@ -75,11 +85,12 @@
         <h2>Encuentra la pieza que habla de ti</h2>
       </div>
       <div class="category-teasers"><a class="category-teaser" href="collares.html"><img
-            src="assets/img/category-collares.png" alt="Collares"><span>Collares</span></a><a class="category-teaser"
+            src="assets/img/susurro-de-renata-3.png" alt="Collares"><span>Collares</span></a><a class="category-teaser"
           href="tobilleras.html"><img src="assets/img/category-tobilleras.png"
             alt="Tobilleras"><span>Tobilleras</span></a><a class="category-teaser" href="aretes.html"><img
             src="assets/img/category-aretes.png" alt="Aretes"><span>Aretes</span></a><a class="category-teaser"
-          href="pulseras.html"><img src="assets/img/category-pulseras.png" alt="Pulseras"><span>Pulseras</span></a>
+          href="pulseras.html"><img src="assets/img/pulsera-elegance/cielo-y-mar-2.png"
+            alt="Pulseras"><span>Pulseras</span></a>
       </div>
     </section>
     <section class="heritage"><img src="assets/img/heritage.png" alt="Proceso artesanal de joyería">

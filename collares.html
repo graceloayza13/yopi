@@ -2,6 +2,12 @@
 <html lang="es">
 
 <head>
+    <script>(function () {
+            try { var t = localStorage.getItem("luma-theme") === "dark" ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) { }
+            var silence = function (ev) { try { ev.viewTransition && ev.viewTransition.ready.catch(function () { }); ev.viewTransition && ev.viewTransition.finished.catch(function () { }); } catch (e) { } };
+            window.addEventListener("pageswap", silence);
+            window.addEventListener("pagereveal", silence);
+        })();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collares | LUMA</title>
@@ -27,11 +33,12 @@
                 aria-label="Abrir menú">☰</button><a class="brand" href="index.html">LU<span>•</span>MA</a>
             <nav class="nav"><a href="index.html">Colecciones</a><a href="aretes.html">Aretes</a><a class="active"
                     href="collares.html">Collares</a><a href="pulseras.html">Pulseras</a><a
-                    href="tobilleras.html">Tobilleras</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></nav>
+                    href="tobilleras.html">Tobilleras</a><a href="nosotros.html">Nosotros</a><a
+                    href="contacto.html">Contacto</a></nav>
             <div class="header-actions"><button class="theme-toggle" type="button" aria-label="Modo oscuro"><span
-            class="theme-toggle-thumb"></span></button>
+                        class="theme-toggle-thumb"></span></button>
 
-      </div>
+            </div>
     </header>
     <div id="drawer-backdrop" class="drawer-backdrop"></div>
     <aside id="drawer" class="drawer">

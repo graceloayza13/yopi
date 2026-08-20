@@ -2,17 +2,30 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8"></meta>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <script>(function(){try{var t=localStorage.getItem("luma-theme")==="dark"?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+    <meta charset="UTF-8">
+    </meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </meta>
     <title>Aretes | LUMA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""></link>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"></link>
-    <link rel="stylesheet" href="css/variables.css"></link>
-    <link rel="stylesheet" href="css/base.css"></link>
-    <link rel="stylesheet" href="css/components.css"></link>
-    <link rel="stylesheet" href="css/pages.css"></link>
-    <link rel="stylesheet" href="css/filters.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    </link>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    </link>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    </link>
+    <link rel="stylesheet" href="css/variables.css">
+    </link>
+    <link rel="stylesheet" href="css/base.css">
+    </link>
+    <link rel="stylesheet" href="css/components.css">
+    </link>
+    <link rel="stylesheet" href="css/pages.css">
+    </link>
+    <link rel="stylesheet" href="css/filters.css">
+    </link>
     <link rel="stylesheet" href="css/mobile.css">
     <script defer="" src="js/data/products.js"></script>
     <script defer="" src="js/app.js"></script>
@@ -34,9 +47,9 @@
                 <a href="contacto.html">Contacto</a>
             </nav>
             <div class="header-actions"><button class="theme-toggle" type="button" aria-label="Modo oscuro"><span
-            class="theme-toggle-thumb"></span></button>
+                        class="theme-toggle-thumb"></span></button>
 
-      </div>
+            </div>
     </header>
 
     <div id="drawer-backdrop" class="drawer-backdrop"></div>
@@ -55,7 +68,7 @@
         </nav>
     </aside>
     <main>
-        <section class="page-hero" style="--hero-image:url('assets/img/category-aretes.png')">
+        <section class="page-hero" style="background-image: url('assets/img/susurro-de-renata-3.png');">
             <div>
                 <span class="eyebrow">Colección LUMA</span>
                 <h1>Aretes</h1>
@@ -75,22 +88,32 @@
             <div class="tabs" role="tablist">
                 <div class="tabs-left">
                     <div class="filter-group" data-filter-group="grupo1">
-                        <button data-tags="contemporaneas">Contemporáneas<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
-                        <button data-tags="culturales">Culturales<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
+                        <button data-tags="contemporaneas">Contemporáneas<span class="tab-remove"
+                                aria-label="Quitar filtro">×</span></button>
+                        <button data-tags="culturales">Culturales<span class="tab-remove"
+                                aria-label="Quitar filtro">×</span></button>
                     </div>
                     <div class="filter-group" data-filter-group="grupo2">
-                        <button data-tags="damas">Damas<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
-                        <button data-tags="caballeros">Caballeros<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
-                        <button data-tags="ninos">Niños<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
+                        <button data-tags="damas">Damas<span class="tab-remove"
+                                aria-label="Quitar filtro">×</span></button>
+                        <button data-tags="caballeros">Caballeros<span class="tab-remove"
+                                aria-label="Quitar filtro">×</span></button>
+                        <button data-tags="ninos">Niños<span class="tab-remove"
+                                aria-label="Quitar filtro">×</span></button>
                     </div>
                     <div class="filter-group" data-filter-group="grupo3">
-                        <button data-tags="verano">Verano<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
-                        <button data-tags="otoño">Otoño<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
-                        <button data-tags="invierno">Invierno<span class="tab-remove" aria-label="Quitar filtro">×</span></button>
+                        <button data-tags="verano">Verano<span class="tab-remove"
+                                aria-label="Quitar filtro">×</span></button>
+                        <button data-tags="otoño">Otoño<span class="tab-remove"
+                                aria-label="Quitar filtro">×</span></button>
+                        <button data-tags="invierno">Invierno<span class="tab-remove"
+                                aria-label="Quitar filtro">×</span></button>
                     </div>
                 </div>
                 <div class="filter-sort">
-                    <button class="filter-sort-button" type="button" aria-haspopup="true" aria-expanded="false"><span class="filter-sort-icon" aria-hidden="true">⚗</span><span data-filter-sort-label="">Ordenar</span></button>
+                    <button class="filter-sort-button" type="button" aria-haspopup="true" aria-expanded="false"><span
+                            class="filter-sort-icon" aria-hidden="true">⚗</span><span
+                            data-filter-sort-label="">Ordenar</span></button>
                     <div class="filter-sort-menu">
                         <button type="button" data-sort="price-asc">Menor a mayor precio</button>
                         <button type="button" data-sort="price-desc">Mayor a menor precio</button>
@@ -101,7 +124,11 @@
             <div class="product-grid" data-product-grid="">
 
                 <article class="product-card" data-tags="verano damas contemporaneas">
-                    <a href="producto.html?producto=aretes-brisa-serena"><img src="assets/img/aretes-brisa-serena.png" alt="Aretes Brisa Serena"></img><span class="product-card-overlay"><span class="product-card-overlay-name">Aretes Brisa Serena</span><span class="product-card-overlay-desc">Piedras naturales talladas a mano con baño de oro.</span></span></a>
+                    <a href="producto.html?producto=aretes-brisa-serena"><img src="assets/img/aretes-brisa-serena.png"
+                            alt="Aretes Brisa Serena"></img><span class="product-card-overlay"><span
+                                class="product-card-overlay-name">Aretes Brisa Serena</span><span
+                                class="product-card-overlay-desc">Piedras naturales talladas a mano con baño de
+                                oro.</span></span></a>
                     <div class="product-card-info">
                         <h3>Aretes Brisa Serena</h3>
                         <p>S/. 30.00</p>
@@ -109,7 +136,11 @@
                 </article>
 
                 <article class="product-card" data-tags="contemporaneas invierno">
-                    <a href="producto.html?producto=aretes-cascada-perlas"><img src="assets/img/aretes-cascada-perlas.png" alt="Aretes Cascada de Perlas"></img><span class="product-card-overlay"><span class="product-card-overlay-name">Aretes Cascada de Perlas</span><span class="product-card-overlay-desc">Elegantes perlas que aportan un toque delicado y sofisticado.</span></span></a>
+                    <a href="producto.html?producto=aretes-cascada-perlas"><img
+                            src="assets/img/aretes-cascada-perlas.png" alt="Aretes Cascada de Perlas"></img><span
+                            class="product-card-overlay"><span class="product-card-overlay-name">Aretes Cascada de
+                                Perlas</span><span class="product-card-overlay-desc">Elegantes perlas que aportan un
+                                toque delicado y sofisticado.</span></span></a>
                     <div class="product-card-info">
                         <h3>Aretes Cascada de Perlas</h3>
                         <p>S/. 35.00</p>
@@ -117,7 +148,11 @@
                 </article>
 
                 <article class="product-card" data-tags="contemporaneas ninos">
-                    <a href="producto.html?producto=aretes-cascada-perlas"><img src="assets/img/aretes-cascada-perlas.png" alt="Aretes Cascada de Perlas"></img><span class="product-card-overlay"><span class="product-card-overlay-name">Aretes Cascada de Perlas</span><span class="product-card-overlay-desc">Un diseño delicado y ligero pensado para un estilo dulce y encantador.</span></span></a>
+                    <a href="producto.html?producto=aretes-cascada-perlas"><img
+                            src="assets/img/aretes-cascada-perlas.png" alt="Aretes Cascada de Perlas"></img><span
+                            class="product-card-overlay"><span class="product-card-overlay-name">Aretes Cascada de
+                                Perlas</span><span class="product-card-overlay-desc">Un diseño delicado y ligero pensado
+                                para un estilo dulce y encantador.</span></span></a>
                     <div class="product-card-info">
                         <h3>Aretes Cascada de Perlas</h3>
                         <p>S/. 35.00</p>
@@ -125,7 +160,11 @@
                 </article>
 
                 <article class="product-card" data-tags="contemporaneas invierno">
-                    <a href="producto.html?producto=aretes-cascada-perlas"><img src="assets/img/aretes-cascada-perlas.png" alt="Aretes Cascada de Perlas"></img><span class="product-card-overlay"><span class="product-card-overlay-name">Aretes Cascada de Perlas</span><span class="product-card-overlay-desc">Perlas de acabado elegante para complementar tus looks de invierno.</span></span></a>
+                    <a href="producto.html?producto=aretes-cascada-perlas"><img
+                            src="assets/img/aretes-cascada-perlas.png" alt="Aretes Cascada de Perlas"></img><span
+                            class="product-card-overlay"><span class="product-card-overlay-name">Aretes Cascada de
+                                Perlas</span><span class="product-card-overlay-desc">Perlas de acabado elegante para
+                                complementar tus looks de invierno.</span></span></a>
                     <div class="product-card-info">
                         <h3>Aretes Cascada de Perlas</h3>
                         <p>S/. 35.00</p>
@@ -133,7 +172,11 @@
                 </article>
 
                 <article class="product-card" data-tags="contemporaneas invierno">
-                    <a href="producto.html?producto=aretes-cascada-perlas"><img src="assets/img/aretes-cascada-perlas.png" alt="Aretes Cascada de Perlas"></img><span class="product-card-overlay"><span class="product-card-overlay-name">Aretes Cascada de Perlas</span><span class="product-card-overlay-desc">Una pieza clásica y delicada para completar cualquier conjunto.</span></span></a>
+                    <a href="producto.html?producto=aretes-cascada-perlas"><img
+                            src="assets/img/aretes-cascada-perlas.png" alt="Aretes Cascada de Perlas"></img><span
+                            class="product-card-overlay"><span class="product-card-overlay-name">Aretes Cascada de
+                                Perlas</span><span class="product-card-overlay-desc">Una pieza clásica y delicada para
+                                completar cualquier conjunto.</span></span></a>
                     <div class="product-card-info">
                         <h3>Aretes Cascada de Perlas</h3>
                     </div>
@@ -172,7 +215,8 @@
                     <h3>Newsletter</h3>
                     <p>Recibe novedades y piezas especiales.</p>
                     <form class="newsletter" data-newsletter="">
-                        <input required="" type="email" aria-label="Correo electrónico" placeholder="Tu correo electrónico"></input>
+                        <input required="" type="email" aria-label="Correo electrónico"
+                            placeholder="Tu correo electrónico"></input>
                         <button aria-label="Suscribirme">→</button>
                     </form>
                     <div class="newsletter-message" data-newsletter-message=""></div>

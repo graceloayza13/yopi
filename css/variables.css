@@ -5,7 +5,10 @@
   --logo-url: url("../assets/img/logo luma-Photoroom.png");
   --serif: "Playfair Display", Georgia, serif; --sans: Poppins, Arial, sans-serif; --script: "Alex Brush", cursive;
   --page: min(1180px, calc(100% - 48px)); --shadow: 0 12px 35px rgb(26 26 24 / 12%);
-  --theme-transition: background-color .3s, color .3s, border-color .3s, box-shadow .3s;
+  --theme-ease: cubic-bezier(.22, 1, .36, 1);
+  --theme-transition: background-color .6s var(--theme-ease), color .6s var(--theme-ease),
+    border-color .6s var(--theme-ease), box-shadow .6s var(--theme-ease), fill .6s var(--theme-ease),
+    opacity .6s var(--theme-ease);
 }
 
 html[data-theme="dark"] {
@@ -16,6 +19,32 @@ html[data-theme="dark"] {
   --shadow: 0 12px 35px rgb(0 0 0 / 45%);
 }
 
-html, body {
-  transition: var(--theme-transition);
+/* La transición de tema solo se activa mientras dura el cambio (clase añadida
+   por app.js al pulsar el interruptor). Así, al navegar entre secciones cada
+   página carga ya con su tema correcto, sin el "parpadeo" de un fundido. */
+html.theme-transitioning,
+html.theme-transitioning body,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: var(--theme-transition) !important;
+}
+
+/* Transición suave y elegante al navegar entre secciones (collares -> aretes, etc). 
+   Nativa del navegador: sin JavaScript, sin frameworks. Si el navegador no la 
+   soporta aún, simplemente no pasa nada (la navegación sigue funcionando normal). */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.5s;
+  animation-timing-function: var(--theme-ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
 }
