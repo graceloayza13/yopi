@@ -2,6 +2,12 @@
 <html lang="es">
 
 <head>
+    <script>(function () {
+            try { var t = localStorage.getItem("luma-theme") === "dark" ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) { }
+            var silence = function (ev) { try { ev.viewTransition && ev.viewTransition.ready.catch(function () { }); ev.viewTransition && ev.viewTransition.finished.catch(function () { }); } catch (e) { } };
+            window.addEventListener("pageswap", silence);
+            window.addEventListener("pagereveal", silence);
+        })();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producto | LUMA</title>
@@ -26,29 +32,29 @@
             <nav class="nav"><a href="index.html">Colecciones</a><a href="aretes.html">Aretes</a><a
                     href="collares.html">Collares</a><a href="pulseras.html">Pulseras</a><a
                     href="tobilleras.html">Tobilleras</a><a href="contacto.html">Contacto</a></nav>
-            <div class="header-actions"><button class="icon-button" aria-label="Buscar">⌕</button><button
-                    class="icon-button" aria-label="Favoritos">♡</button><button class="icon-button"
-                    aria-label="Bolsa">♧</button></div><button class="icon-button mobile-bag"
-                aria-label="Bolsa">♧</button>
-        </div>
+            <div class="header-actions"><button class="theme-toggle" type="button" aria-label="Modo oscuro"><span
+                        class="theme-toggle-thumb"></span></button>
+
+            </div>
     </header>
     <div id="drawer-backdrop" class="drawer-backdrop"></div>
     <aside id="drawer" class="drawer">
         <div class="drawer-head"><a class="brand" href="index.html">LU<span>•</span>MA</a><button id="close-menu"
                 class="icon-button" aria-label="Cerrar menú">×</button></div>
-        <nav><a href="index.html">Colecciones</a><a href="aretes.html">Aretes</a><a
-                href="collares.html">Collares</a><a href="pulseras.html">Pulseras</a><a
-                href="tobilleras.html">Tobilleras</a><a href="contacto.html">Contacto</a></nav>
+        <nav><a href="index.html">Colecciones</a><a href="aretes.html">Aretes</a><a href="collares.html">Collares</a><a
+                href="pulseras.html">Pulseras</a><a href="tobilleras.html">Tobilleras</a><a
+                href="contacto.html">Contacto</a></nav>
     </aside>
     <main class="container">
         <section class="product-detail" data-product-detail>
-            
+
             <div class="detail-image" data-gallery>
-    <div class="gallery-track" data-gallery-track></div>
-    <button class="gallery-nav prev" type="button" data-gallery-prev aria-label="Imagen anterior">❮</button>
-    <button class="gallery-nav next" type="button" data-gallery-next aria-label="Imagen siguiente">❯</button>
-    <div class="gallery-dots" data-gallery-dots></div>
-</div>
+                <div class="gallery-track" data-gallery-track></div>
+                <button class="gallery-nav prev" type="button" data-gallery-prev aria-label="Imagen anterior">❮</button>
+                <button class="gallery-nav next" type="button" data-gallery-next
+                    aria-label="Imagen siguiente">❯</button>
+                <div class="gallery-dots" data-gallery-dots></div>
+            </div>
 
 
             <div class="detail-info"><a class="back-link" data-product-back href="pulseras.html">← Volver a Pulseras</a>
@@ -60,8 +66,8 @@
                     individualmente cada perla por su lustre excepcional y forma perfecta, creando una pieza que
                     trasciende el tiempo y las tendencias.</p>
                 <div class="properties">
-                   
-                   
+
+
                     <div class="property">
                         <h3 data-property-title="0">Pureza y equilibrio</h3>
                         <p data-property-text="0">Las perlas del río simbolizan pureza, equilibrio y conexión con la
