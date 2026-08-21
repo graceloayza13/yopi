@@ -80,8 +80,8 @@
 }
  
 .hero .button {
-    border-color: var(--ink);
-    background: var(--ink);
+    border-color: rgb(255 255 255 / .75);
+    background: rgb(21 20 16 / .55);
     color: var(--white);
 }
  
