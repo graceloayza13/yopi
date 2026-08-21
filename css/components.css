@@ -171,6 +171,17 @@
     color: var(--gold);
 }
 
+.drawer-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--muted);
+}
+
 .footer {
     background: var(--bg-alt);
     padding: 65px 0 27px;
@@ -445,6 +456,7 @@
     border: 1px solid var(--line);
     padding: 9px 17px;
     background: transparent;
+    color: var(--muted);
     font-size: 10px;
     letter-spacing: .08em;
     text-transform: uppercase;
@@ -498,9 +510,3 @@
     color: var(--muted);
     font-size: 11px;
 }
-
-/* La sección "Nosotros" (hero, historia, fundadora, galería y cita)
-   se estilizó en css/pages.css, junto a las demás páginas internas
-   del sitio (contacto, colecciones, producto), para reutilizar las
-   mismas variables de color/tipografía y evitar reglas duplicadas
-   o en conflicto con el resto del sitio. */

@@ -63,10 +63,6 @@
         justify-self: center;
     }
 
-    .drawer-foot {
-        display: none;
-    }
-
     .footer {
         padding: 50px 0 26px;
     }
@@ -178,6 +174,19 @@
         inset: auto 9px 9px;
         padding: 0 10px;
         min-height: 35px;
+    }
+
+    /* En táctil, tocar una tarjeta puede activar :hover (hover "pegajoso"),
+       lo que mostraba el overlay y el desenfoque pensados solo para el
+       hover de escritorio. Se desactivan para que en mobile solo se vea
+       el botón "Ver producto" de arriba. */
+    .product-card:hover .product-card-overlay {
+        opacity: 0;
+    }
+
+    .product-card:hover img {
+        transform: none;
+        filter: none;
     }
 
     .tabs {
