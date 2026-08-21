@@ -132,6 +132,28 @@
         emptyState.querySelector("a").href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     }
 
+    const mobileFilterToggle = document.querySelector(".filter-mobile-toggle");
+    const tabsLeft = document.querySelector(".tabs-left");
+
+    function updateMobileFilterState() {
+        if (!mobileFilterToggle) return;
+        mobileFilterToggle.classList.toggle("has-selection", Object.keys(activeTags).length > 0);
+    }
+
+    if (mobileFilterToggle && tabsLeft) {
+        mobileFilterToggle.addEventListener("click", () => {
+            const isOpen = tabsLeft.classList.toggle("open");
+            mobileFilterToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!tabsLeft.contains(event.target)) {
+                tabsLeft.classList.remove("open");
+                mobileFilterToggle.setAttribute("aria-expanded", "false");
+            }
+        });
+    }
+
     groups.forEach((group) => {
         const key = group.dataset.filterGroup;
         const buttons = [...group.querySelectorAll("button[data-tags]")];
@@ -151,6 +173,7 @@
                 }
 
                 currentPage = 1;
+                updateMobileFilterState();
                 applyFilters();
             });
         });

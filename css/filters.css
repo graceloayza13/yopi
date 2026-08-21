@@ -13,10 +13,29 @@
     gap: 9px 22px;
 }
 
+/* En escritorio el botón "Filtrar" no se usa: los grupos se ven directo.
+   display:contents hace que .filter-groups no agregue una caja propia,
+   así sus hijos (.filter-group) siguen siendo ítems flex de .tabs-left. */
+.tabs .filter-mobile-toggle {
+    display: none;
+}
+
+.filter-groups {
+    display: contents;
+}
+
 .filter-group {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 9px;
+    padding-right: 22px;
+    border-right: 1px solid var(--line);
+}
+
+.filter-group:last-child {
+    padding-right: 0;
+    border-right: 0;
 }
 
 .filter-group.has-selection button:not(.active) {
