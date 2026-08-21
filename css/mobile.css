@@ -79,21 +79,22 @@
     }
 
     .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         row-gap: 0;
+        column-gap: 24px;
     }
 
-    .footer-grid > div {
-        padding: 22px 0;
+    /* El bloque de marca ocupa todo el ancho arriba, y "Explorar" /
+       "Servicio" quedan uno al lado del otro debajo. */
+    .footer-grid > div:first-child {
+        grid-column: 1 / -1;
+        padding: 0 0 22px;
         border-bottom: 1px solid var(--line);
     }
 
-    .footer-grid > div:first-child {
-        padding-top: 0;
-    }
-
-    .footer-grid > div:last-child {
-        border-bottom: none;
+    .footer-grid > div:not(:first-child) {
+        padding: 22px 0 0;
+        border-bottom: 0;
     }
 
     .footer p {
