@@ -91,6 +91,62 @@
     transform: translateX(20px);
 }
 
+/* Variante ícono sol/luna: solo visible en mobile (ver mobile.css).
+   Modo claro -> luna dorada (invita a pasar a oscuro).
+   Modo oscuro -> sol blanco (invita a volver a claro). */
+.theme-toggle-icon {
+    display: none;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 16px;
+    transition: var(--theme-transition), background-color .2s, transform .2s;
+}
+
+.theme-toggle-icon .theme-icon-sun {
+    display: none;
+}
+
+.theme-toggle-icon .theme-icon-moon {
+    display: inline;
+    color: var(--gold);
+}
+
+.theme-toggle-icon.is-active .theme-icon-moon {
+    display: none;
+}
+
+.theme-toggle-icon.is-active .theme-icon-sun {
+    display: inline;
+    color: var(--white);
+}
+
+.theme-toggle-icon:hover {
+    background: var(--bg-alt);
+}
+
+.theme-toggle-icon:hover .theme-icon-moon {
+    color: var(--olive);
+}
+
+.theme-toggle-icon.is-active:hover .theme-icon-sun {
+    color: var(--gold);
+}
+
+.theme-toggle-icon:active {
+    background: var(--gold);
+    transform: scale(.92);
+}
+
+.theme-toggle-icon:active .theme-icon-moon,
+.theme-toggle-icon.is-active:active .theme-icon-sun {
+    color: var(--bg);
+}
+
 .icon-button {
     border: 0;
     padding: 6px;

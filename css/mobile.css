@@ -52,9 +52,20 @@
         display: block;
     }
 
-    .nav,
-    .header-actions {
+    .nav {
         display: none;
+    }
+
+    .header-actions {
+        display: flex;
+    }
+
+    .header-actions .theme-toggle:not(.theme-toggle-icon) {
+        display: none;
+    }
+
+    .theme-toggle-icon {
+        display: inline-flex;
     }
 
     .brand {

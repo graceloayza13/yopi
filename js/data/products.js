@@ -1,5 +1,5 @@
 (() => {
-  const WHATSAPP_NUMBER = "51999999999";
+  const WHATSAPP_NUMBER = "51924505903";
 
   const classicDescription = "Una obra maestra de simetría y resplandor. Seleccionamos individualmente cada perla por su lustre excepcional y forma perfecta, creando una pieza que trasciende el tiempo y las tendencias.";
   const classicProperties = [
